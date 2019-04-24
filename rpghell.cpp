@@ -13,6 +13,7 @@ void timeSpan();
 void end();
 void attempts();
 void battle();
+void storyline();
 int input;
 string qUpdates;
 string qStages;
@@ -31,14 +32,16 @@ int main() {
     switch (input) {
 
         case 1:
-         cout << "Talk to Satan..." << endl;
+         cout << "Talk to Satan himself..." << endl;
+         dreamSequence();
 
         case 2:
         cout << "Discover more..." << endl;
+        ask();
         
         case 3:
         cout << "Attempt to..." << endl;
-        
+        attempts();
     }
 }
 void enter() {
@@ -91,16 +94,15 @@ void viewPast() {
     cout << "\n 1. Yes.\n" << endl;
     cout << "\n 2. No. I knew my fate.\n" << endl;
     cin >> input;
-    
+
     switch (input) {
 
         case 1:
-        cout << "\n When you admit your truth, I'll be here." << endl;
+        cout << "\n When you admit your truth, I'll be here. Until then, fight for your life." << endl;
+        battle();
 
         case 2:
-        cout << "\n";
-        system("pause");
-        enter();
+        storyline();
    }
 }
 
@@ -118,9 +120,31 @@ void dreamSequence() {
 
         case 2:
         cout << "\nGood. Follow me..." << endl;
+        timeSpan();
+        battle();
     }
 }
 
+void storyline() {
+	
+			cout << "Choose one of the following story lines which applies to you: \n" << endl;
+			cout << "\n 1) I have had an addiction." << endl;
+			cout << "\n 2) I have broken the law." << endl;
+			cout << "\n 3) I have cheated in some way." << endl;
+			cout << "\n 4) I am innocent." << endl;
+			
+			switch(input) {
+			
+			case 1:
+				cout << "We all have." << endl;
+			case 2:
+				cout << "which law? the law of god or your own law?" << endl;
+			case 3: 
+			cout << "jsdnksms" << endl;
+			case 4: 
+			cout << "smdl" << endl;
+	}
+}
 void timeSpan() {
 	
 	cout << "soon...";
@@ -144,19 +168,7 @@ void battle() {
     }
 }
 
-void story() {
-	cout << "Choose one of the following story lines which applies to you: \n" << endl;
-	cout << "\n 1) I have had an addiction." << endl;
-	cout << "\n 2) I have broken the law." << endl;
-	cout << "\n 3) I have cheated in some way." << endl;
-	cout << "\n 4) I am innocent." << endl;
-	/*
-	switch (input) {
-		
-		case 1: 
-	}
-	*/
-}
+
 void end() {
 
     system("cls");
